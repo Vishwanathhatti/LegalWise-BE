@@ -1,29 +1,30 @@
 services:
   - type: web
-    name: job-portal-backend
+    name: LegalWise-backend-backend
     env: node
     plan: free
     branch: main
-    repo: https://github.com/Vishwaraj100/job-portal-backend
+    repo: https://github.com/Vishwanathhatti/LegalWise-BE
     buildCommand: npm install
     startCommand: npm start
     envVars:
       - key: MONGO_URI
         sync: false
-      - key: JWT_SECRET
+      - key: PORT
         sync: false
-      - key: CLOUDINARY_CLOUD_NAME
+      - key: SECRET_KEY
         sync: false
-      - key: CLOUDINARY_API_KEY
+      - key: GEMINI_API_KEY
         sync: false
-      - key: CLOUDINARY_API_SECRET
+      - key: REDIS_HOST
+        sync: false
+      - key: REDIS_PORT
+        sync: false
+      - key: REDIS_PASSWORD
+        sync: false
+      - key: SMTP_EMAIL
+        sync: false
+      - key: SMTP_PASSWORD
         sync: false
 
-  - type: web
-    name: job-portal-frontend
-    env: static
-    plan: free
-    branch: main
-    repo: https://github.com/Vishwaraj100/job-portal-frontend
-    buildCommand: npm install && npm run build
-    staticPublishPath: dist
+
