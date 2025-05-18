@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "npm rebuild bcrypt && your-other-build-commands"
   },
   "type": "module"
 }
