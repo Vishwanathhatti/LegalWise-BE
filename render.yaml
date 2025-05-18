@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: job-portal-backend
+    env: node
+    plan: free
+    branch: main
+    repo: https://github.com/Vishwaraj100/job-portal-backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+
+  - type: web
+    name: job-portal-frontend
+    env: static
+    plan: free
+    branch: main
+    repo: https://github.com/Vishwaraj100/job-portal-frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
