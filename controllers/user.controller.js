@@ -3,7 +3,6 @@ import bcrypt from "bcrypt";
 import userModel from "../models/user.model.js";
 import "dotenv/config";
 import redisClient from "../utils/redis.js";
-import exp from "constants";
 import nodemailer from "nodemailer"
 
 export const registerUser = async (req, res) => {
