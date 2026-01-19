@@ -8,7 +8,7 @@ export const addMessage = async (req, res) => {
 
   try {
     const genAI = new GoogleGenerativeAI(gemini_api_key);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-lite" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const { content } = req.body;
     const conversationId = req.params.id;
